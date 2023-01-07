@@ -1,0 +1,42 @@
+<div class="container">
+  <div>
+    <h2>Ejercicio 1: Uso de pipes</h2>
+    <label for="">Valor: </label>
+    <input type="text" [(ngModel)]="valor" />
+    <p>Resultado: {{ valor | uppercase }}</p>
+  </div>
+  <hr />
+  <div>
+    <h2>Ejercicio 2: Currency pipes</h2>
+    <label for="">Valor: </label>
+    <input type="text" [(ngModel)]="monto" />
+    <select name="" [(ngModel)]="codigo">
+      <option value="defecto" selected>Selecciona el tipo de moneda</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+    <p class="result" *ngIf="codigo !== 'defecto'">
+      Resultado: {{ monto | currency : codigo }}
+    </p>
+  </div>
+  <hr />
+  <div class="fecha">
+    <h2>Ejercicio 3: Fecha</h2>
+    <p>
+      <span>Fecha: 2023-01-06 18:00 ==> </span>
+      <span class="text">{{ "2023-01-06 18:00" | mypipe }}</span>
+    </p>
+    <p>
+      <span>Fecha: 2023-01-06 00:00 ==> </span>
+      <span class="text">{{ "2023-01-06 00:00" | mypipe }}</span>
+    </p>
+    <p>
+      <span>Fecha: 2023-01-01 00:00 ==> </span>
+      <span class="text">{{ "2023-01-01 00:00" | mypipe }}</span>
+    </p>
+    <p>
+      <span>Fecha: 2022-10-01 00:00 ==> </span>
+      <span class="text">{{ "2022-10-01 00:00" | mypipe }}</span>
+    </p>
+  </div>
+</div>
