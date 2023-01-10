@@ -10,6 +10,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { MypipePipe } from './mypipe.pipe';
 import { FormsModule } from '@angular/forms';
 import { NumbersOnlyDirective } from './directives/numbers-only.directive';
+import { Actividad14Module } from './actividad-14/actividad-14.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { NumbersOnlyDirective } from './directives/numbers-only.directive';
     MypipePipe,
     NumbersOnlyDirective,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, Actividad14Module],
   providers: [],
   bootstrap: [AppComponent],
 })

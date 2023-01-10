@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="my-4">Registro de Personas</h1>
+
+  <!-- <pre>{{ contactForm.value | json }}</pre> -->
+
+  <app-component-hijo [valores]="formValues"> </app-component-hijo>
+
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <label for="name" class="form-label">Nombre:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="model.nombre"
+      #name="ngModel"
+    />
+
+    <label for="">DNI:</label>
+    <input
+      type="text"
+      name="dni"
+      class="form-control"
+      [(ngModel)]="model.dni"
+      #dni="ngModel"
+    />
+
+    <label for="" class="form-label">Estado civil:</label>
+    <select
+      class="form-select"
+      name="estado_civil"
+      [(ngModel)]="model.estado_civil"
+      #estado_civil="ngModel"
+    >
+      <option value="">Seleccione una opción</option>
+      <option value="Soltero">Soltero</option>
+      <option value="Casado">Casado</option>
+      <option value="Conviviente">Conviviente</option>
+    </select>
+    <button type="submit" class="btn btn-success mt-4">Enviar</button>
+  </form>
+</div>
