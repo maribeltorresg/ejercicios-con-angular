@@ -9,6 +9,7 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { MypipePipe } from './mypipe.pipe';
 import { FormsModule } from '@angular/forms';
+import { NumbersOnlyDirective } from './directives/numbers-only.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     CalculadoraComponent,
     PipesComponent,
     MypipePipe,
+    NumbersOnlyDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
