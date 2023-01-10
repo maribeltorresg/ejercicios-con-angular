@@ -1,0 +1,6 @@
+<div class="container">
+  <h1 class="my-4">Registro de Personas</h1>
+
+  <app-component-hijo [valores]="form"></app-component-hijo>
+</div>
+<app-form (formSubmit)="agregarCampo($event)"></app-form>

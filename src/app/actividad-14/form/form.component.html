@@ -1,9 +1,7 @@
 <div class="container">
-  <h1 class="my-4">Registro de Personas</h1>
-
   <!-- <pre>{{ contactForm.value | json }}</pre> -->
 
-  <app-component-hijo [valores]="formValues"> </app-component-hijo>
+  <!-- <app-component-hijo [valores]="formValues"> </app-component-hijo> -->
 
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <label for="name" class="form-label">Nombre:</label>

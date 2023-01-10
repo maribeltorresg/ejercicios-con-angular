@@ -2,8 +2,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 interface ContactForm {
-  name: string;
+  nombre: string;
   dni: string;
+  estado_civil: string;
 }
 
 @Component({
@@ -18,14 +19,9 @@ export class FormComponent {
     estado_civil: '',
   };
 
-  formValues: any = '';
-
   @Output() formSubmit = new EventEmitter<ContactForm>();
 
   onSubmit(form: NgForm): void {
-    // console.log('Form values', form.value);
-    this.formValues = form.value;
-
     this.formSubmit.emit(form.value);
   }
 }
